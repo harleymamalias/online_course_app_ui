@@ -18,10 +18,9 @@ class BigCardClassRecommendedWidget extends StatelessWidget {
           height: 360,
           decoration: BoxDecoration(
             gradient: const LinearGradient(
-              colors: [
-                Color(0xff9288E4),
-                Color(0xff534EA7),
-              ],
+              begin: Alignment(0.23, -0.97),
+              end: Alignment(-0.23, 0.97),
+              colors: [Color(0xFF9288E4), Color(0xFF534EA7)],
             ),
             borderRadius: BorderRadius.circular(30),
           ),
@@ -68,7 +67,7 @@ class BigCardClassRecommendedWidget extends StatelessWidget {
                   ),
                   child: const Text(
                     'Recommended',
-                    style: TextStyle(color: Colors.white, fontSize: 15),
+                    style: TextStyle(color: app_color.textColor, fontSize: 15),
                   ),
                 ),
               ),
@@ -89,14 +88,14 @@ class BigCardClassRecommendedWidget extends StatelessWidget {
               Text(
                 'UI/UX DESIGNER',
                 style: TextStyle(
-                    color: Colors.white,
+                    color: app_color.textColor,
                     fontSize: 25,
                     fontWeight: FontWeight.bold),
               ),
               Text(
                 'BEGINNER',
                 style: TextStyle(
-                    color: Colors.white,
+                    color: app_color.textColor,
                     fontSize: 25,
                     fontWeight: FontWeight.bold),
               ),
