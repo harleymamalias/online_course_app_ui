@@ -21,7 +21,7 @@ class FreeOnlineCoursesHeading extends StatelessWidget {
           style: TextStyle(
             fontSize: 14,
             fontWeight: FontWeight.w400,
-            color: Color(0xFF9C9A9A),
+            color: app_color.subTextColor,
           ),
         ),
       ],

@@ -15,14 +15,16 @@ class BigCardNewClass extends StatelessWidget {
         Container(
           margin: const EdgeInsets.all(10),
           width: 250,
-          height: 360,
-          decoration: BoxDecoration(
+          height: 350,
+          decoration: ShapeDecoration(
             gradient: const LinearGradient(
               begin: Alignment(0.23, -0.97),
               end: Alignment(-0.23, 0.97),
               colors: [Color(0xFFF4C465), Color(0xFFC63956)],
             ),
-            borderRadius: BorderRadius.circular(30),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(22),
+            ),
           ),
           child: Stack(
             children: [
