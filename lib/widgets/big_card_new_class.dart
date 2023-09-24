@@ -8,7 +8,7 @@ class BigCardNewClass extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const saly_10 = AssetImage('assets/Saly-10.png');
+    const saly_36 = AssetImage('assets/Saly-36.png');
 
     return Stack(
       children: [
@@ -46,8 +46,10 @@ class BigCardNewClass extends StatelessWidget {
                 bottom: 0,
                 right: 0,
                 child: Image(
-                  image: saly_10,
+                  image: saly_36,
                   alignment: Alignment.bottomRight,
+                  width: 400,
+                  height: 200,
                 ),
               ),
             ],

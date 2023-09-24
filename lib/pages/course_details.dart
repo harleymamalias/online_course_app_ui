@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:online_course_app_ui/pages/my_home_page.dart';
 import 'package:online_course_app_ui/colors/app_color.dart' as app_color;
 import 'package:online_course_app_ui/widgets/course_detail_heading.dart';
-import 'package:online_course_app_ui/widgets/stars_rating.dart';
 
 class CourseDetails extends StatelessWidget {
   const CourseDetails({Key? key});
@@ -14,6 +13,7 @@ class CourseDetails extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: app_color.bgColor,
+          elevation: 10,
           title: const Text(
             'Course Details',
             style: TextStyle(
@@ -34,16 +34,7 @@ class CourseDetails extends StatelessWidget {
           ),
         ),
         body: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.topRight,
-              end: Alignment.topLeft,
-              colors: [
-                Color(0xFF9288E4),
-                Color(0xFF534EA7),
-              ],
-            ),
-          ),
+          color: app_color.bgColor,
           child: Column(
             children: [
               Container(
@@ -53,17 +44,12 @@ class CourseDetails extends StatelessWidget {
                   gradient: LinearGradient(
                     begin: Alignment(0.23, -0.97),
                     end: Alignment(-0.23, 0.97),
-                    colors: [
-                      Color(0xFF9288E4),
-                      Color(0xFF534EA7),
-                    ],
+                    colors: [Color(0xFF9288E4), Color(0xFF534EA7)],
                   ),
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(22),
-                      bottomRight: Radius.circular(30),
-                    ),
-                  ),
+                      borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(22),
+                          bottomRight: Radius.circular(22))),
                 ),
                 child: Stack(
                   children: [
@@ -100,22 +86,22 @@ class CourseDetails extends StatelessWidget {
               const SizedBox(height: 20),
               const CourseDetailHeadingTitle(),
               const SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Positioned(
-                    left: 0,
-                    child: Container(
+              Container(
+                margin: const EdgeInsets.only(left: 20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Container(
                       width: 50,
                       height: 50,
                       decoration: const BoxDecoration(
                         shape: BoxShape.circle,
-                        color: Colors.blue, // Set the desired color
+                        color: Colors.blue,
                       ),
                       child: Center(
                         child: ClipOval(
                           child: Image.asset(
-                            'assets/Saly-10.png',
+                            'assets/Ellipse-3.png',
                             height: 60,
                             width: 56,
                             fit: BoxFit.cover,
@@ -123,20 +109,17 @@ class CourseDetails extends StatelessWidget {
                         ),
                       ),
                     ),
-                  ),
-                  Positioned(
-                    left: 30,
-                    child: Container(
+                    Container(
                       width: 50,
                       height: 50,
                       decoration: const BoxDecoration(
                         shape: BoxShape.circle,
-                        color: Colors.green, // Set the desired color
+                        color: Colors.green,
                       ),
                       child: Center(
                         child: ClipOval(
                           child: Image.asset(
-                            'assets/Saly-10.png',
+                            'assets/Ellipse-4.png',
                             height: 56,
                             width: 56,
                             fit: BoxFit.cover,
@@ -144,20 +127,17 @@ class CourseDetails extends StatelessWidget {
                         ),
                       ),
                     ),
-                  ),
-                  Positioned(
-                    left: 60,
-                    child: Container(
+                    Container(
                       width: 50,
                       height: 50,
                       decoration: const BoxDecoration(
                         shape: BoxShape.circle,
-                        color: Colors.red, // Set the desired color
+                        color: Colors.red,
                       ),
                       child: Center(
                         child: ClipOval(
                           child: Image.asset(
-                            'assets/Saly-10.png',
+                            'assets/Ellipse-5.png',
                             height: 56,
                             width: 56,
                             fit: BoxFit.cover,
@@ -165,37 +145,36 @@ class CourseDetails extends StatelessWidget {
                         ),
                       ),
                     ),
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Text(
-                        '+28k Members',
-                        style: TextStyle(
+                    const SizedBox(width: 10),
+                    const Text(
+                      '+28k Members',
+                      style: TextStyle(
+                          color: Color(0xFFC9C9C9),
                           fontSize: 18,
-                          color: Colors.grey,
+                          fontWeight: FontWeight.w400),
+                    ),
+                    const SizedBox(width: 30),
+                    Container(
+                      width: 54,
+                      height: 47,
+                      decoration: ShapeDecoration(
+                        color: const Color(0xFF353567),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(6)),
+                      ),
+                      child: IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.thumb_up,
+                          color: Colors.white,
                         ),
                       ),
-                      const SizedBox(height: 10),
-                      Container(
-                        width: 100,
-                        height: 40,
-                        decoration: BoxDecoration(
-                          color: Colors.blue,
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: Center(
-                          child: Text(
-                            'Like',
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ],
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 10,
               ),
             ],
           ),
