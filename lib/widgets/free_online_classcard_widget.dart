@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:online_course_app_ui/colors/app_color.dart' as app_color;
+import 'package:online_course_app_ui/widgets/stars_rating.dart';
 
 class FreeOnlineClassCardWidget extends StatelessWidget {
   const FreeOnlineClassCardWidget({
@@ -27,10 +28,9 @@ class FreeOnlineClassCardWidget extends StatelessWidget {
             )
           ],
         ),
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Row(
+        child: Stack(
+          children: [
+            Row(
               children: [
                 // Leading network image
                 Padding(
@@ -84,59 +84,36 @@ class FreeOnlineClassCardWidget extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(
-                  width: 40,
-                ),
-                Positioned(
-                  top: 0,
-                  right: 0,
-                  bottom: 0,
-                  child: Center(
-                    child: Container(
-                      width: 45, // Adjust the width as needed
-                      height: 45, // Make it a square
-                      decoration: const BoxDecoration(
-                        shape: BoxShape.circle, // Circular shape
-                        color: Color(
-                            0xFFEB53A2), // Background color of the circular container
-                      ),
-                      child: Center(
-                        child: IconButton(
-                          icon: const Icon(Icons.play_arrow,
-                              size: 30,
-                              color: Colors.white), // Customize the play button
-                          onPressed: () {
-                            // Add your play button action here
-                          },
-                        ),
-                      ),
-                    ),
-                  ),
-                ) // Add spacing between text and stars
               ],
             ),
-          ),
+            Positioned(
+              top: 0,
+              right: 20,
+              bottom: 0,
+              child: Center(
+                child: Container(
+                  width: 45, // Adjust the width as needed
+                  height: 45, // Make it a square
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle, // Circular shape
+                    color: Color(
+                        0xFFEB53A2), // Background color of the circular container
+                  ),
+                  child: Center(
+                    child: IconButton(
+                      icon: const Icon(Icons.play_arrow,
+                          size: 30,
+                          color: Colors.white), // Customize the play button
+                      onPressed: () {
+                        // Add your play button action here
+                      },
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
-      ),
-    );
-  }
-}
-
-class StarsWidget extends StatelessWidget {
-  const StarsWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 20,
-      height: 20,
-      clipBehavior: Clip.antiAlias,
-      decoration: const BoxDecoration(),
-      child: const Icon(
-        Icons.star,
-        color: Colors.amber,
       ),
     );
   }
