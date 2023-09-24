@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:online_course_app_ui/pages/my_home_page.dart';
 import 'package:online_course_app_ui/colors/app_color.dart' as app_color;
-import 'package:online_course_app_ui/widgets/course_detail_heading.dart';
+import 'package:online_course_app_ui/widgets/coursepage_details/course_detail_heading.dart';
+import 'package:online_course_app_ui/widgets/subjects/fundamentals_of_design.dart';
+
+import 'package:online_course_app_ui/widgets/subjects/intro_design_graphic.dart';
+import 'package:online_course_app_ui/widgets/subjects/layout_design.dart';
 
 class CourseDetails extends StatelessWidget {
   const CourseDetails({Key? key});
@@ -11,6 +15,7 @@ class CourseDetails extends StatelessWidget {
     const saly_36 = AssetImage('assets/Saly-36.png');
     return SafeArea(
       child: Scaffold(
+        backgroundColor: app_color.bgColor,
         appBar: AppBar(
           backgroundColor: app_color.bgColor,
           elevation: 10,
@@ -33,8 +38,8 @@ class CourseDetails extends StatelessWidget {
             },
           ),
         ),
-        body: Container(
-          color: app_color.bgColor,
+        body: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
           child: Column(
             children: [
               Container(
@@ -175,6 +180,20 @@ class CourseDetails extends StatelessWidget {
               ),
               const SizedBox(
                 height: 10,
+              ),
+              const SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                padding: EdgeInsets.zero,
+                child: Column(
+                  children: [
+                    OfferedSubjectIDG(),
+                    OfferedSubjectFD(),
+                    OfferedSubjectLD(),
+                    OfferedSubjectIDG(),
+                    OfferedSubjectFD(),
+                    OfferedSubjectLD(),
+                  ],
+                ),
               ),
             ],
           ),

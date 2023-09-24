@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:online_course_app_ui/colors/app_color.dart' as app_color;
-import 'package:online_course_app_ui/widgets/big_card_class_recommended.dart';
-import 'package:online_course_app_ui/widgets/big_card_new_class.dart';
-import 'package:online_course_app_ui/widgets/free_online_class_heading.dart';
-import 'package:online_course_app_ui/widgets/free_online_classcard_widget.dart';
+import 'package:online_course_app_ui/widgets/coursepage_details/free_online_class_heading.dart';
+import 'package:online_course_app_ui/widgets/coursepage_details/free_online_classcard_widget.dart';
+import 'package:online_course_app_ui/widgets/homepage/big_card_class_recommended.dart';
+import 'package:online_course_app_ui/widgets/homepage/big_card_new_class.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -11,8 +11,9 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-        backgroundColor: app_color.bgColor,
-        body: SingleChildScrollView(
+      backgroundColor: app_color.bgColor,
+      body: SafeArea(
+        child: SingleChildScrollView(
           scrollDirection: Axis.vertical,
           child: Padding(
             padding: EdgeInsets.all(8.0),
@@ -96,6 +97,8 @@ class MyHomePage extends StatelessWidget {
               ],
             ),
           ),
-        ));
+        ),
+      ),
+    );
   }
 }
