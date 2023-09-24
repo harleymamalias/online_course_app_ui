@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:online_course_app_ui/colors/app_color.dart' as app_color;
-import 'package:online_course_app_ui/widgets/stars_rating.dart';
 
 class OfferedSubjectFD extends StatelessWidget {
   const OfferedSubjectFD({

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:online_course_app_ui/colors/app_color.dart' as app_color;
+import 'package:online_course_app_ui/widgets/stars_rating.dart';
 
-class OfferedSubjectIDG extends StatelessWidget {
-  const OfferedSubjectIDG({
+class FreeOnlineClassFlutter extends StatelessWidget {
+  const FreeOnlineClassFlutter({
     super.key,
   });
 
@@ -31,17 +32,22 @@ class OfferedSubjectIDG extends StatelessWidget {
           children: [
             Row(
               children: [
-                Container(
-                  width: 100,
-                  height: 200,
-                  decoration: ShapeDecoration(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(20),
-                    ),
-                    color: const Color(0xFFFFB4B4),
-                    image: const DecorationImage(
-                      image: AssetImage('assets/Saly-20.png'),
-                      fit: BoxFit.fill,
+                Padding(
+                  padding: const EdgeInsets.only(left: 20, bottom: 10),
+                  child: Container(
+                    width: 100,
+                    height: 200,
+                    decoration: ShapeDecoration(
+                      shape: RoundedRectangleBorder(
+                        borderRadius:
+                            BorderRadius.circular(9),
+                      ),
+                      color: const Color(0xFFFFB4B4),
+                      image: const DecorationImage(
+                        image: AssetImage(
+                            'assets/Saly-24.png'),
+                        fit: BoxFit.fill,
+                      ),
                     ),
                   ),
                 ),
@@ -51,52 +57,59 @@ class OfferedSubjectIDG extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Introduction Design Graphic',
+                      'Flutter Developer',
                       style: TextStyle(
                         fontSize: 16,
                         color: app_color.textColor,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
-                    SizedBox(height: 5,),
                     Text(
-                      '12 Minutes',
+                      '8 Hours',
                       style: TextStyle(
                         fontSize: 12,
                         color: app_color.subTextColor,
                         fontWeight: FontWeight.w400,
                       ),
                     ),
+                    Row(
+                      children: [
+                        StarsWidget(),
+                        StarsWidget(),
+                        StarsWidget(),
+                        StarsWidget(),
+                        StarsWidget(),
+                      ],
+                    ),
                   ],
                 ),
               ],
             ),
             Positioned(
-              left: 190,
-              bottom: 20,
+              top: 0,
+              right: 20,
+              bottom: 0,
               child: Center(
                 child: Container(
-                  width: 39,
-                  height: 20,
-                  decoration: ShapeDecoration(
-                    color: const Color(0xFFEB53A2),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
-                    ),
+                  width: 45,
+                  height: 45, 
+                  decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: Color(
+                        0xFFEB53A2), 
                   ),
-                  child: const Center(
-                    child: Text(
-                      'Free',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 11,
-                        fontWeight: FontWeight.bold,
-                      ),
+                  child: Center(
+                    child: IconButton(
+                      icon: const Icon(Icons.play_arrow,
+                          size: 30,
+                          color: Colors.white),
+                      onPressed: () {
+                      },
                     ),
                   ),
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:online_course_app_ui/colors/app_color.dart' as app_color;
+import 'package:online_course_app_ui/pages/graphicsdesign_master_details.dart';
 
 class BigCardNewClass extends StatelessWidget {
   const BigCardNewClass({
@@ -63,7 +64,9 @@ class BigCardNewClass extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.all(5),
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const GraphicDesignCourseDetails() ));
+                  },
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all<Color>(
                       Color(app_color.newClassButton.value),

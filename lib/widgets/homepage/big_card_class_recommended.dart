@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:online_course_app_ui/colors/app_color.dart' as app_color;
-import 'package:online_course_app_ui/pages/course_details.dart';
+import 'package:online_course_app_ui/pages/uiuxdesigner_beginner_details.dart';
 
 class BigCardClassRecommendedWidget extends StatelessWidget {
   const BigCardClassRecommendedWidget({
@@ -63,7 +63,11 @@ class BigCardClassRecommendedWidget extends StatelessWidget {
                 padding: const EdgeInsets.all(5),
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const CourseDetails() ));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                const UiUxDesignerBeginnerDetails()));
                   },
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all<Color>(

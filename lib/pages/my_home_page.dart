@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:online_course_app_ui/colors/app_color.dart' as app_color;
-import 'package:online_course_app_ui/widgets/coursepage_details/free_online_class_heading.dart';
-import 'package:online_course_app_ui/widgets/coursepage_details/free_online_classcard_widget.dart';
 import 'package:online_course_app_ui/widgets/homepage/big_card_class_recommended.dart';
 import 'package:online_course_app_ui/widgets/homepage/big_card_new_class.dart';
+import 'package:online_course_app_ui/widgets/homepage/free_online_class_heading.dart';
+import 'package:online_course_app_ui/widgets/homepage/flutter_developer.dart';
+import 'package:online_course_app_ui/widgets/homepage/fullstack_js.dart';
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({super.key});
@@ -85,12 +86,12 @@ class MyHomePage extends StatelessWidget {
                   padding: EdgeInsets.zero,
                   child: Column(
                     children: [
-                      FreeOnlineClassCardWidget(),
-                      FreeOnlineClassCardWidget(),
-                      FreeOnlineClassCardWidget(),
-                      FreeOnlineClassCardWidget(),
-                      FreeOnlineClassCardWidget(),
-                      FreeOnlineClassCardWidget(),
+                      FreeOnlineClassFlutter(),
+                      FreeOnlineClassJavascript(),
+                      FreeOnlineClassFlutter(),
+                      FreeOnlineClassJavascript(),
+                      FreeOnlineClassFlutter(),
+                      FreeOnlineClassJavascript(),
                     ],
                   ),
                 ),
