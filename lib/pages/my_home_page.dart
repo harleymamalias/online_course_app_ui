@@ -29,8 +29,8 @@ class MyHomePage extends StatelessWidget {
                         'Online',
                         style: TextStyle(
                             color: app_color.textColor,
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold),
+                            fontSize: 36,
+                            fontWeight: FontWeight.w700),
                       ),
                     ],
                   ),
@@ -43,8 +43,8 @@ class MyHomePage extends StatelessWidget {
                         'Master Class',
                         style: TextStyle(
                             color: app_color.textColor,
-                            fontSize: 30,
-                            fontWeight: FontWeight.bold),
+                            fontSize: 36,
+                            fontWeight: FontWeight.w500),
                       ),
                     ],
                   ),

@@ -9,7 +9,7 @@ class FreeOnlineClassCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: const EdgeInsets.all(10.0),
       child: Container(
         width: 375,
         height: 92,
@@ -29,7 +29,7 @@ class FreeOnlineClassCardWidget extends StatelessWidget {
         ),
         child: Center(
           child: Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0),
             child: Row(
               children: [
                 // Leading network image
@@ -97,7 +97,8 @@ class FreeOnlineClassCardWidget extends StatelessWidget {
                       height: 45, // Make it a square
                       decoration: const BoxDecoration(
                         shape: BoxShape.circle, // Circular shape
-                        color: Color(0xFFEB53A2), // Background color of the circular container
+                        color: Color(
+                            0xFFEB53A2), // Background color of the circular container
                       ),
                       child: Center(
                         child: IconButton(

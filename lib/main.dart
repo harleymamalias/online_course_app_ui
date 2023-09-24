@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Online Course App',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: app_color.bgColor),
         useMaterial3: true,
